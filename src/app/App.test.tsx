@@ -2,8 +2,21 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders header text', () => {
+test('Renders app layout', () => {
    render(<App />);
-   const headerText = screen.getByText(/App running :\)/i);
-   expect(headerText).toBeInTheDocument();
+
+   const headerComponent = screen.getByTestId('Header');
+   expect(headerComponent).toBeInTheDocument();
+
+   const playgroundComponent = screen.getByTestId('Playground');
+   expect(playgroundComponent).toBeInTheDocument();
+
+   const footerComponent = screen.getByTestId('Footer');
+   expect(footerComponent).toBeInTheDocument();
+
+   const wrapperComponent = screen.getByTestId('Wrapper');
+   expect(wrapperComponent).toBeInTheDocument();
+   expect(wrapperComponent).toContainElement(headerComponent);
+   expect(wrapperComponent).toContainElement(playgroundComponent);
+   expect(wrapperComponent).toContainElement(footerComponent);
 });

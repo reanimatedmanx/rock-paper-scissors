@@ -11,7 +11,8 @@
       "test": "react-scripts test",
       "format": "yarn prettier --write .",
       "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
-      "eject": "react-scripts eject"
+      "eject": "react-scripts eject",
+      "prepare": "husky install"
    },
    "dependencies": {
       "@testing-library/jest-dom": "^5.14.1",
@@ -45,6 +46,7 @@
       "eslint-plugin-prettier": "^4.0.0",
       "eslint-plugin-react": "7.28.0",
       "eslint-plugin-react-hooks": "4.3.0",
+      "husky": "^7.0.0",
       "prettier": "^2.5.1"
    },
    "eslintConfig": {

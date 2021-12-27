@@ -4,6 +4,7 @@ import { Footer } from './components/Layout/Footer/Footer';
 import { Header } from './components/Layout/Header/Header';
 import { Playground } from './components/Layout/Playground/Playground';
 import { GameHeader } from './components/GameHeader/GameHeader';
+import { Versus } from './components/Versus/Versus';
 
 const App = (): JSX.Element => (
    <Wrapper>
@@ -11,7 +12,7 @@ const App = (): JSX.Element => (
          <GameHeader />
       </Header>
       <Playground>
-         <div>Test</div>
+         <Versus />
       </Playground>
       <Footer>
          <div>Test</div>

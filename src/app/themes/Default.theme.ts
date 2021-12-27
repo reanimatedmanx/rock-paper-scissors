@@ -17,8 +17,5 @@ export const DefaultTheme = createTheme({
       primary: {
          main: '#fff',
       },
-      background: {
-         default: '#172446',
-      },
    },
 });

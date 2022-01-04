@@ -6,5 +6,7 @@ export type StickerProps = {
 };
 
 export const BaseSticker = ({ children, color }: StickerProps): JSX.Element => (
-   <S.BaseSticker color={color}>{children}</S.BaseSticker>
+   <S.BaseSticker color={color}>
+      <S.BaseStickerInner>{children}</S.BaseStickerInner>
+   </S.BaseSticker>
 );

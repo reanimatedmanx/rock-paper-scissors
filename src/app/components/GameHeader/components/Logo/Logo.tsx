@@ -1,9 +1,7 @@
 import React from 'react';
 import { S } from './Logo.styled';
 
-// TODO Find a  matching font and remove this svgs.
-import LogoSvg from './img/logo.svg';
-import LogoBonusSvg from './img/logo-bonus.svg';
+import { Typography } from '@mui/material';
 
 export enum ELogoVariant {
    SIMPLE,
@@ -17,9 +15,34 @@ export type LogoProps = {
 export const Logo = ({ variant }: LogoProps): JSX.Element => (
    <S.Logo data-testid="Logo">
       {variant === ELogoVariant.SIMPLE ? (
-         <img src={LogoSvg} alt="rock-paper-scissors" />
+         <>
+            <Typography
+               variant="h6"
+               color="primary"
+               lineHeight="0.8"
+               letterSpacing="1px"
+            >
+               ROCK
+            </Typography>
+            <Typography
+               variant="h6"
+               color="primary"
+               lineHeight="0.8"
+               letterSpacing="1px"
+            >
+               PAPER
+            </Typography>
+            <Typography
+               variant="h6"
+               color="primary"
+               lineHeight="0.8"
+               letterSpacing="1px"
+            >
+               SCISSORS
+            </Typography>
+         </>
       ) : (
-         <img src={LogoBonusSvg} alt="rock-paper-scissors-lizard-spock" />
+         <div>TODO</div>
       )}
    </S.Logo>
 );

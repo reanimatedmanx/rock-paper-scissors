@@ -4,7 +4,7 @@ const Playground = styled.main`
    display: flex;
    justify-content: center;
    height: 100%;
-   min-height: 450px;
+   min-height: 420px;
 `;
 
 export const S = {

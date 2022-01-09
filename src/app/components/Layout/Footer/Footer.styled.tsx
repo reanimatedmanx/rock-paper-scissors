@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 const Footer = styled.footer`
-   min-height: 85px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 270px;
 `;
 
 export const S = {

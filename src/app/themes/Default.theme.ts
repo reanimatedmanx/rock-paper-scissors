@@ -16,6 +16,11 @@ export const DefaultTheme = createTheme({
          letterSpacing: 3,
          fontWeight: 700,
       },
+      button: {
+         fontSize: '1rem',
+         letterSpacing: 2,
+         marginTop: 4,
+      },
    },
    palette: {
       primary: {

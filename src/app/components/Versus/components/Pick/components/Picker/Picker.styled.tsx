@@ -14,17 +14,17 @@ type PickerSlotProps = {
 const Picker = styled(Box)`
    position: relative;
    display: flex;
+   height: inherit;
+   justify-content: center;
+   align-items: end;
+   margin-top: 70px;
 `;
 
 const PickerSlot = styled(Box)<PickerSlotProps>`
    position: absolute;
-   top: 50%;
-   left: 50%;
    transition: 1s all;
    width: ${DEFAULTS.slotSizeMobile}px;
    height: ${DEFAULTS.slotSizeMobile}px;
-   margin: -${DEFAULTS.slotSizeMobile}px calc(${DEFAULTS.slotSizeMobile}px / 2 *
-            -1);
    transform: rotate(${({ rotation }) => rotation * 1}deg)
       translate(${DEFAULTS.radius / 2}px)
       rotate(${({ rotation }) => rotation * -1}deg);

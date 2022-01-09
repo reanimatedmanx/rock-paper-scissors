@@ -2,7 +2,9 @@ import { Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const DEFAULTS = {
-   radius: 400,
+   radius: 205,
+   slotSizeMobile: 128,
+   slotSizeDesktop: 200,
 };
 
 type PickerSlotProps = {
@@ -19,9 +21,10 @@ const PickerSlot = styled(Box)<PickerSlotProps>`
    top: 50%;
    left: 50%;
    transition: 1s all;
-   width: 205px;
-   height: 205px;
-   margin: -103px;
+   width: ${DEFAULTS.slotSizeMobile}px;
+   height: ${DEFAULTS.slotSizeMobile}px;
+   margin: -${DEFAULTS.slotSizeMobile}px calc(${DEFAULTS.slotSizeMobile}px / 2 *
+            -1);
    transform: rotate(${({ rotation }) => rotation * 1}deg)
       translate(${DEFAULTS.radius / 2}px)
       rotate(${({ rotation }) => rotation * -1}deg);

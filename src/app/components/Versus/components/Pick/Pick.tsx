@@ -6,7 +6,7 @@ export const Pick = (): JSX.Element => (
       <Sticker type={ESticker.PAPER} />
       <Sticker type={ESticker.SCISSORS} />
       <Sticker type={ESticker.ROCK} />
-      <Sticker type={ESticker.LIZARD} />
-      <Sticker type={ESticker.SPOCK} />
+      {/* <Sticker type={ESticker.LIZARD} />
+      <Sticker type={ESticker.SPOCK} /> */}
    </Picker>
 );

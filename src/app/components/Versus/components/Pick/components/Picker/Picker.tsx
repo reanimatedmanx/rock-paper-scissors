@@ -28,7 +28,7 @@ export class Picker extends Component<PickerProps> {
 
       const childrenArray = Children.toArray(this.props.children);
 
-      let rot = 198;
+      let rot = 210;
 
       return (
          <S.Picker>

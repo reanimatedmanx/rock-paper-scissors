@@ -4,15 +4,13 @@ import { alpha, styled } from '@mui/material/styles';
 const GameHeader = styled(Paper)(({ theme }) => ({
    display: 'flex',
    flexDirection: 'column',
-   width: 704,
+   width: '100%',
+   maxWidth: 704,
    background: 'transparent',
-   paddingTop: theme.spacing(2),
-   paddingBottom: theme.spacing(2),
-   paddingRight: theme.spacing(3),
-   paddingLeft: theme.spacing(3),
+   padding: theme.spacing(1),
    borderWidth: 4,
    borderRadius: 12,
-   borderColor: alpha(theme.palette.primary.main, 0.5),
+   borderColor: alpha(theme.palette.primary.main, 0.3),
 }));
 
 export const S = {

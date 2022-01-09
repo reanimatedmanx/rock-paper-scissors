@@ -4,7 +4,7 @@ const Header = styled.header`
    display: flex;
    justify-content: center;
    align-items: center;
-   min-height: 244px;
+   padding: 30px;
 `;
 
 export const S = {

@@ -3,17 +3,12 @@ import { Paper } from './components/Paper';
 import { Scissors } from './components/Scissors';
 import { Lizard } from './components/Lizard';
 import { Spock } from './components/Spock';
-
-export enum ESticker {
-   ROCK,
-   PAPER,
-   SCISSORS,
-   LIZARD,
-   SPOCK,
-}
+import { ESticker } from '../../../../shared/enums';
+import { Box } from '@mui/material';
 
 export type StickerProps = {
    type: ESticker;
+   onClick?: (type: ESticker) => void;
 };
 
 const StickerTypeSwitcher = (type: ESticker) => {
@@ -33,6 +28,15 @@ const StickerTypeSwitcher = (type: ESticker) => {
    }
 };
 
-export const Sticker = ({ type }: StickerProps): JSX.Element => (
-   <>{StickerTypeSwitcher(type)}</>
+export const Sticker = ({ type, onClick }: StickerProps): JSX.Element => (
+   <Box
+      sx={{
+         display: 'flex',
+         width: 'inherit',
+         height: 'inherit',
+      }}
+      onClick={() => onClick && onClick(type)}
+   >
+      {StickerTypeSwitcher(type)}
+   </Box>
 );

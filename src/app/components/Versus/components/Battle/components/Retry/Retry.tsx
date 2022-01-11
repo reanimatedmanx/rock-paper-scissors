@@ -5,6 +5,7 @@ import { S } from './Retry.styled';
 
 export type RetryProps = {
    gameState: EGameState;
+   onClick?: () => void;
 };
 
 const getText = (gameState: EGameState): string => {
@@ -20,7 +21,7 @@ const getText = (gameState: EGameState): string => {
    }
 };
 
-export const Retry = ({ gameState }: RetryProps): JSX.Element => (
+export const Retry = ({ gameState, onClick }: RetryProps): JSX.Element => (
    <S.Retry as={Animation} duration={0.5} animation="fadeIn">
       <Typography color="primary" variant="h2">
          {getText(gameState)}
@@ -34,6 +35,7 @@ export const Retry = ({ gameState }: RetryProps): JSX.Element => (
             paddingLeft: 5,
             paddingRight: 5,
          }}
+         onClick={onClick}
       >
          Play again
       </Button>

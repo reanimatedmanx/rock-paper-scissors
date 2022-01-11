@@ -14,6 +14,7 @@ const {
    playerWon,
    houseWon,
    playerDraw,
+   playAgainRequested,
 } = actions;
 
 export const VersusContainer = (): JSX.Element => {
@@ -73,7 +74,11 @@ export const VersusContainer = (): JSX.Element => {
       }, 2000);
    }, [dispatch, playerPick, housePick]);
 
-   // 5. Player might trigger a replay.
+   // 5. Player might play again preserving the score.
+   const handleRetryClicked = useCallback(
+      () => dispatch(playAgainRequested()),
+      [dispatch]
+   );
 
    return (
       <UI
@@ -81,6 +86,7 @@ export const VersusContainer = (): JSX.Element => {
          playerPick={playerPick}
          housePick={housePick}
          onStickerPicked={handleStickerPicked}
+         onRetryClicked={handleRetryClicked}
       />
    );
 };

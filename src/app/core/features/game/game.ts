@@ -43,20 +43,21 @@ const gameSlice = createSlice({
       playerWon: state => {
          state.gameState = EGameState.PLAYER_WON;
          state.score += 1;
-         console.log('WE WON!!');
       },
       houseWon: state => {
          state.gameState = EGameState.HOUSE_WON;
          if (state.score <= 0) {
-            console.log('PLAYER LOST!!');
             return state;
          }
          state.score -= 1;
-         console.log('PLAYER LOST!!');
       },
       playerDraw: state => {
          state.gameState = EGameState.DRAW;
-         console.log('DRAWW!!');
+      },
+      playAgainRequested: state => {
+         state.gameState = EGameState.PICK;
+         state.playerPick = null;
+         state.housePick = null;
       },
    },
 });

@@ -10,6 +10,7 @@ export type VersusProps = {
    playerPick: ESticker | null;
    housePick: ESticker | null;
    onStickerPicked?: (type: ESticker) => void;
+   onRetryClicked?: () => void;
 };
 
 export const Versus = ({
@@ -17,6 +18,7 @@ export const Versus = ({
    playerPick,
    housePick,
    onStickerPicked,
+   onRetryClicked,
 }: VersusProps): JSX.Element => (
    <S.Versus data-testid="Versus">
       {gameState === EGameState.PICK ? (
@@ -32,7 +34,9 @@ export const Versus = ({
                EGameState.PLAYER_WON,
                EGameState.HOUSE_WON,
                EGameState.DRAW,
-            ].includes(gameState) && <Retry gameState={gameState} />}
+            ].includes(gameState) && (
+               <Retry gameState={gameState} onClick={onRetryClicked} />
+            )}
          </Box>
       )}
    </S.Versus>

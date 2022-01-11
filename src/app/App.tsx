@@ -3,17 +3,17 @@ import { Wrapper } from './components/Layout/Wrapper/Wrapper';
 import { Footer } from './components/Layout/Footer/Footer';
 import { Header } from './components/Layout/Header/Header';
 import { Playground } from './components/Layout/Playground/Playground';
-import { GameHeader } from './components/GameHeader/GameHeader';
-import { Versus } from './components/Versus/Versus';
 import { Rules } from './components/Rules/Rules';
+import { VersusContainer } from './containers/VersusContainer/VersusContainer';
+import { GameHeaderContainer } from './containers/GameHeaderContainer/GameHeaderContainer';
 
 const App = (): JSX.Element => (
    <Wrapper>
       <Header>
-         <GameHeader />
+         <GameHeaderContainer />
       </Header>
       <Playground>
-         <Versus />
+         <VersusContainer />
       </Playground>
       <Footer>
          <Rules />

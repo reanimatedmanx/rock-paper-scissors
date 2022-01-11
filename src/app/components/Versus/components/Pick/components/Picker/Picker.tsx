@@ -32,8 +32,12 @@ export class Picker extends Component<PickerProps> {
 
       return (
          <S.Picker>
-            {childrenArray.map(C => {
-               const component = <PickerSlot rotation={rot}>{C}</PickerSlot>;
+            {childrenArray.map((C, index) => {
+               const component = (
+                  <PickerSlot key={`picker-slot-${index}`} rotation={rot}>
+                     {C}
+                  </PickerSlot>
+               );
 
                rot = rot + this.angle;
 

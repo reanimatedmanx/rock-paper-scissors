@@ -1,11 +1,16 @@
-import { ESticker, Sticker } from '../Sticker';
+import { Sticker } from '../Sticker';
+import { ESticker } from '../../../../shared/enums';
 import { Picker } from './components/Picker/Picker';
 
-export const Pick = (): JSX.Element => (
+export type PickerProps = {
+   onStickerPicked?: (type: ESticker) => void;
+};
+
+export const Pick = ({ onStickerPicked }: PickerProps): JSX.Element => (
    <Picker>
-      <Sticker type={ESticker.PAPER} />
-      <Sticker type={ESticker.SCISSORS} />
-      <Sticker type={ESticker.ROCK} />
+      <Sticker type={ESticker.PAPER} onClick={onStickerPicked} />
+      <Sticker type={ESticker.SCISSORS} onClick={onStickerPicked} />
+      <Sticker type={ESticker.ROCK} onClick={onStickerPicked} />
       {/* <Sticker type={ESticker.LIZARD} />
       <Sticker type={ESticker.SPOCK} /> */}
    </Picker>

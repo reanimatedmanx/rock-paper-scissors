@@ -22,12 +22,19 @@ const Picker = styled(Box)`
 
 const PickerSlot = styled(Box)<PickerSlotProps>`
    position: absolute;
-   transition: 1s all;
+   transition: 0.3s all;
+   cursor: pointer;
    width: ${DEFAULTS.slotSizeMobile}px;
    height: ${DEFAULTS.slotSizeMobile}px;
    transform: rotate(${({ rotation }) => rotation * 1}deg)
       translate(${DEFAULTS.radius / 2}px)
       rotate(${({ rotation }) => rotation * -1}deg);
+
+   :hover {
+      transform: rotate(${({ rotation }) => rotation * 1}deg)
+         translate(${DEFAULTS.radius / 2}px)
+         rotate(${({ rotation }) => rotation * -1}deg) scale(1.2);
+   }
 `;
 
 export const S = {

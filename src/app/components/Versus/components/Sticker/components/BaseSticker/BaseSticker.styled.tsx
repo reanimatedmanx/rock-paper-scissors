@@ -18,15 +18,8 @@ const BaseSticker = styled(Paper)`
    height: inherit;
    padding: ${DEFAULTS.borderSize}px;
    background: ${({ color }) => color};
-   transition: 0.3s all;
-   cursor: pointer;
-
    box-shadow: ${alpha(common.black, 0.3)} 0px -${stickerShadowOffset}px 0px 1px
       inset;
-
-   :hover {
-      transform: scale(1.2) rotate(6deg);
-   }
 `;
 
 const BaseStickerInner = styled(Box)`

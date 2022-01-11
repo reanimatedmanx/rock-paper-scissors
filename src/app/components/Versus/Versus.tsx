@@ -1,30 +1,30 @@
-import React from 'react';
 import { S } from './Versus.styled';
 import { Pick } from './components/Pick/Pick';
-import { Results } from './components/Results/Results';
-import { Unveil } from './components/Unveil/Unveil';
+import { Battle } from './components/Battle/Battle';
+import { ESticker, EGameState } from '../../shared/enums';
 
-export enum EVersusState {
-   PICK,
-   UNVEIL,
-   RESULTS,
-}
-
-const VersusStateSwitcher = (state: EVersusState): JSX.Element => {
-   switch (state) {
-      case EVersusState.PICK:
-         return <Pick />;
-      case EVersusState.UNVEIL:
-         return <Unveil />;
-      case EVersusState.RESULTS:
-         return <Results />;
-      default:
-         return <Pick />;
-   }
+export type VersusProps = {
+   gameState: EGameState;
+   playerPick: ESticker | null;
+   housePick: ESticker | null;
+   onStickerPicked?: (type: ESticker) => void;
 };
 
-export const Versus = (): JSX.Element => (
+export const Versus = ({
+   gameState,
+   playerPick,
+   housePick,
+   onStickerPicked,
+}: VersusProps): JSX.Element => (
    <S.Versus data-testid="Versus">
-      {VersusStateSwitcher(EVersusState.PICK)}
+      {gameState === EGameState.PICK ? (
+         <Pick onStickerPicked={onStickerPicked} />
+      ) : (
+         <Battle
+            gameState={gameState}
+            playerPick={playerPick || ESticker.ROCK}
+            housePick={housePick || ESticker.ROCK}
+         />
+      )}
    </S.Versus>
 );

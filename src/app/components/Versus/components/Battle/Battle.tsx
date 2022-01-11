@@ -3,6 +3,7 @@ import { Animation } from '../../../../shared/components/Animation';
 import { ESticker, EGameState } from '../../../../shared/enums';
 import { Sticker } from '../Sticker';
 import { S } from './Battle.styled';
+import { Highlight } from './components/Highlight';
 
 export type BattleProps = {
    gameState: EGameState;
@@ -17,8 +18,8 @@ const PlayerStickerSwitcher = (
    if (gameState === EGameState.PLAYER_WON) {
       return (
          <>
-            <S.StickerWon />
-            <Sticker type={playerPick} />;
+            <Highlight />
+            <Sticker type={playerPick} />
          </>
       );
    }
@@ -35,15 +36,15 @@ const HouseStickerSwitcher = (
          return <S.StickerUnknown />;
       case EGameState.HOUSE_WON:
          return (
-            <Animation duration={1} animation="fadeIn">
-               <S.StickerWon />
-               <Sticker type={housePick} />;
-            </Animation>
+            <>
+               <Highlight />
+               <Sticker type={housePick} />
+            </>
          );
       default:
          return (
             <Animation duration={1} animation="fadeIn">
-               <Sticker type={housePick} />;
+               <Sticker type={housePick} />
             </Animation>
          );
    }

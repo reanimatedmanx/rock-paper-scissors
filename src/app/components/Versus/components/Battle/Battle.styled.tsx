@@ -15,11 +15,9 @@ const BattlePick = styled.div`
 
 const BattlePickSticker = styled.div`
    display: flex;
-   justify-content: center;
-   align-items: center;
+   position: relative;
    width: 130px;
    height: 130px;
-   position: relative;
 `;
 
 const StickerUnknown = styled.div`
@@ -29,14 +27,9 @@ const StickerUnknown = styled.div`
    border-radius: 100%;
 `;
 
-const StickerWon = styled.div`
-   position: absolute;
-`;
-
 export const S = {
    Battle,
    BattlePick,
    BattlePickSticker,
    StickerUnknown,
-   StickerWon,
 };

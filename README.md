@@ -1,5 +1,7 @@
 # Getting Started
 
+Preview is up & running [here](https://adoring-sinoussi-18b38a.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Clone this repo and install dependencies

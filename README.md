@@ -1,7 +1,8 @@
-# Getting Started
+# Rock-paper-scisors
 
 ![image](https://github.com/reanimatedmanx/rock-paper-scissors/assets/32410574/074a0d51-0e86-4716-949c-7842ae99590c)
 
+A technical challenge requested by @Actioncy
 
 Preview is up & running [here](https://adoring-sinoussi-18b38a.netlify.app/)
 

@@ -1,5 +1,8 @@
 # Getting Started
 
+![image](https://github.com/reanimatedmanx/rock-paper-scissors/assets/32410574/074a0d51-0e86-4716-949c-7842ae99590c)
+
+
 Preview is up & running [here](https://adoring-sinoussi-18b38a.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
